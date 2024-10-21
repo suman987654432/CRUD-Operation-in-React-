@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Student</title>
+  </head>
+  <body bgcolor="pink">
+    <h1>Edit Student Details</h1>
+    <form action="/students/update/<%= student._id %>" method="POST">
+      <label for="rollno">Roll No:</label>
+      <input
+        type="text"
+        id="rollno"
+        name="rollno"
+        value="<%= student.rollno %>"
+        required
+      /><br /><br />
+
+      <label for="name">Name:</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        value="<%= student.name %>"
+        required
+      /><br /><br />
+
+      <label for="city">City:</label>
+      <input
+        type="text"
+        id="city"
+        name="city"
+        value="<%= student.city %>"
+        required
+      /><br /><br />
+
+      <label for="fees">Fees:</label>
+      <input
+        type="text"
+        id="fees"
+        name="fees"
+        value="<%= student.fees %>"
+        required
+      /><br /><br />
+
+      <button type="submit">Update</button>
+    </form>
+  </body>
+</html>

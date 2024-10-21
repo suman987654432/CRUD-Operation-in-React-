@@ -1,0 +1,27 @@
+<table border="1" width="500" align="center" bgcolor="yellow">
+  <tr>
+    <th>Roll No</th>
+    <th>id</th>
+    <th>Name</th>
+    <th>City</th>
+    <th>Fees</th>
+    <th>Action</th>
+  </tr>
+  <% Data.forEach((key) => { %>
+    <tr>
+      <td><%= key.rollno %></td>
+      <td><%= key._id %></td>
+      <td><%= key.name %></td>
+      <td><%= key.city %></td>
+      <td><%= key.fees %></td>
+      <td>
+        <form action="/students/delete/<%= key._id %>" method="POST">
+          <button type="submit">Delete</button>
+        </form>
+        <form action="/students/edit/<%= key._id %>" method="GET" style="display:inline;">
+          <button type="submit">Edit</button>
+        </form>
+      </td>
+    </tr>
+  <% }) %>
+</table>
